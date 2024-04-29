@@ -14,6 +14,9 @@ export default function Home() {
         <li>
           <Link href="/auth/confirm">Sign Up</Link>
         </li>
+        <li>
+          <Link href="/logins">Logins</Link>
+        </li>
       </ul>
     </main>
   );
