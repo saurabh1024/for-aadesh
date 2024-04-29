@@ -17,6 +17,9 @@ export default function Home() {
         <li>
           <Link href="/logins">Logins</Link>
         </li>
+        <li>
+          <Link href="/Registor">Registor</Link>
+        </li>
       </ul>
     </main>
   );
