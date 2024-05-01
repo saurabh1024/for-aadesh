@@ -1,0 +1,67 @@
+.collection-card {
+    background-color: #0D0B20;
+    border: 1px solid #FFFFFF26;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.collection_slider {
+    .owl-theme .owl-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        position: absolute;
+        left: -20px;
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border-radius: 50%;
+        color: #000;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        position: absolute;
+        right: -20px;
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border-radius: 50%;
+        color: #000;
+    }
+
+    .form_control {
+        background-color: #1B1830;
+        border-radius: 4px;
+        padding: 10px 16px;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.account_photo {
+    border: 1px dashed #FFFFFF66;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.react-datepicker-wrapper{
+    width: 100%;
+}
+.react-datepicker__input-container .react-datepicker__calendar-icon{
+    top: 10px;
+    left: 10px;
+    text: #FFFFFF80;
+    fill: #FFFFFF80;
+}

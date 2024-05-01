@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import Avatar from './avatar'
+import Banner from './Banner'
 
 export default function AccountForm({ user }) {
     const supabase = createClient()
@@ -9,6 +10,7 @@ export default function AccountForm({ user }) {
     const [fullname, setFullname] = useState(null)
     const [username, setUsername] = useState(null)
     const [avatar_url, setAvatarUrl] = useState(null)
+    const [banner_url, setBannerUrl] = useState(null)
 
     const getProfile = useCallback(async () => {
         try {
@@ -16,7 +18,7 @@ export default function AccountForm({ user }) {
 
             const { data, error, status } = await supabase
                 .from('profiles')
-                .select(`name, username, avatar_url`)
+                .select(`name, username`)
                 .eq('id', user?.id)
                 .single()
 
@@ -28,6 +30,7 @@ export default function AccountForm({ user }) {
                 setFullname(data.name)
                 setUsername(data.username)
                 setAvatarUrl(data.avatar_url)
+                setBannerUrl(data.banner_url)
             }
         } catch (error) {
             alert('Error loading user data!')
@@ -38,9 +41,9 @@ export default function AccountForm({ user }) {
 
     useEffect(() => {
         getProfile()
-    }, [user, getProfile])
+    }, [user])
 
-    async function updateProfile({ username, avatar_url }) {
+    async function updateProfile({ fullname, username, avatar_url, banner_url }) {
         try {
             setLoading(true)
 
@@ -49,6 +52,7 @@ export default function AccountForm({ user }) {
                 name: fullname,
                 username,
                 avatar_url,
+                banner_url,
                 updated_at: new Date().toISOString(),
             })
             if (error) throw error
@@ -71,16 +75,25 @@ export default function AccountForm({ user }) {
                     updateProfile({ fullname, username, avatar_url: url })
                 }}
             />
+            <Banner
+                uid={user?.id}
+                url={banner_url}
+                size={150}
+                onUpload={(url) => {
+                    setBannerUrl(url)
+                    updateProfile({ fullname, username, banner_url: url })
+                }}
+            />
             <div>
                 <label htmlFor="email">Email</label>
-                <input id="email" type="text" value={user?.email} disabled />
+                <input className='font-danger' id="email" type="text" value={user?.email} disabled />
             </div>
             <div>
                 <label htmlFor="fullName">Full Name</label>
                 <input
                     id="fullName"
                     type="text"
-                    value={fullname || ''}
+                    value={ user?.name || fullname || ''}
                     onChange={(e) => setFullname(e.target.value)}
                 />
             </div>
@@ -89,7 +102,7 @@ export default function AccountForm({ user }) {
                 <input
                     id="username"
                     type="text"
-                    value={username || ''}
+                    value={user?.username || username || ''}
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div>

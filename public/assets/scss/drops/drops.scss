@@ -1,0 +1,309 @@
+.drops {
+    .nav-pills .nav-link.active {
+        background-color: transparent;
+        border-bottom: 1.5px solid #FFFFFF;
+        border-radius: 0;
+    }
+
+    .nav-link {
+        color: #FFFFFF99;
+    }
+}
+
+.mint_form {
+    #input-file-upload {
+        display: none;
+    }
+
+    .image_upload {
+        background-color: #FFFFFF05;
+        border: 1px dashed #FFFFFF4D;
+        padding: 50px 40px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .upload-button {
+        border: 1px solid #7093FF;
+        padding: 5px 20px;
+        border-radius: 4px;
+    }
+
+    .fill_form {
+        .form-label {
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            background-color: #1B1830 !important;
+            border: 0;
+            outline: none;
+            box-shadow: none;
+            padding: 14px 16px;
+            color: #fff;
+
+            &::placeholder {
+                color: #FFFFFF80;
+                font-weight: 300;
+            }
+        }
+
+        .blockchain {
+            border: 1px solid #FFFFFF33 !important;
+            color: #FFFFFF99 !important;
+            padding: 14px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin-right: 5px;
+            }
+
+            @media (max-width: 1200px) {
+                .blockchain img {
+                    max-width: 24px;
+                    /* Adjust image size for smaller screens */
+                    margin-right: 10px;
+                    /* Adjust margin for smaller screens */
+                }
+            }
+        }
+
+        .btn-check:checked+.btn {
+            border: 1.5px solid !important;
+            border-radius: 4px;
+            border-image-source: linear-gradient(88.51deg, rgba(171, 89, 255, 0.8) 38.25%, rgba(133, 143, 255, 0.8) 57.67%, rgba(77, 154, 255, 0.8) 76.48%) !important;
+            border-image-slice: 1 !important;
+        }
+
+        .btn-check:checked+.btn span {
+            background: linear-gradient(86.87deg, #AB59FF 2.03%, #858FFF 38.96%, #4D9AFF 74.72%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-check-input {
+            background-color: #1B1830;
+            border: 1px solid #FCFCFC33;
+            box-shadow: none;
+            width: 20px;
+            height: 20px;
+
+            &:checked {
+                background-color: #4D9AFF;
+            }
+        }        
+    }
+}
+
+.offers {
+    .cards {
+        .card {
+            border: 1.5px solid;
+            border-image-source: linear-gradient(88.51deg, rgba(171, 89, 255, 0.8) 38.25%, rgba(133, 143, 255, 0.8) 57.67%, rgba(77, 154, 255, 0.8) 76.48%);
+            border-image-slice: 1;
+            box-shadow: 0px 10px 250px 0px rgba(0, 0, 0, 0.250)
+        }
+    }
+}
+
+.drops {
+    .nav::-webkit-scrollbar {
+        width: 0;
+
+    }
+
+    .nav {
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+        overflow-y: hidden;
+        /* Hide vertical overflow */
+        white-space: nowrap;
+        /* Prevent content from wrapping */
+        -webkit-overflow-scrolling: touch;
+        /* Enable smooth scrolling on iOS */
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        /* Hide scrollbar in IE and Edge */
+        scrollbar-width: none;
+        /* Hide scrollbar in Firefox */
+    }
+}
+
+.faileds {
+    .failed:last-child {
+        .failed_card {
+            border-bottom: 0;
+        }
+    }
+}
+
+.floyx_nft {
+    .floyx_card {
+        a {
+            border: 1px solid #7093FF;
+            margin-top: 10px;
+        }
+    }
+}
+
+.upgrade_item {
+    #input-file-upload {
+        display: none;
+    }
+
+    .image_upload {
+        background-color: #FFFFFF05;
+        border: 1.5px dashed;
+        border-image-source: linear-gradient(88.51deg, rgba(171, 89, 255, 0.8) 38.25%, rgba(133, 143, 255, 0.8) 57.67%, rgba(77, 154, 255, 0.8) 76.48%);
+        border-image-slice: 1;
+        padding: 50px 40px;
+        text-align: center;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upload-button {
+        border: 1px solid #7093FF;
+        padding: 10px 30px;
+        border-radius: 4px;
+    }
+}
+
+.upgrade_box {
+    background-color: #0D0B20;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #F0F0F03D;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #4D9AFF;
+    min-height: 160px;
+}
+
+.upgrade_img {
+    @media screen and (max-width:991px) {
+        min-height: 260px;
+    }
+}
+
+.main_tooltip {
+    &:hover {
+        .upgrade_tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.upgrade_tooltip {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background-color: #1C1A35;
+    color: #FFFFFF99;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #FFFFFF1F;
+    box-shadow: 0px 10px 20px 0px #0000005C;
+    border-radius: 4px;
+    padding: 30px 30px 30px 30px !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+    @media screen and (max-width:575px) {
+        padding: 15px 15px 15px 15px !important;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 10.4px;
+        height: 10.4px;
+        bottom: -7px;
+        left: 13px;
+        opacity: 0px;
+        transform: rotate(45deg);
+        background-color: #1C1A35;
+        border: 1px solid #FFFFFF1F;
+        border-width: 0 1px 1px 0;
+    }
+
+    li {
+        padding-bottom: 10px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+#progress-bar-container {
+    .progress {
+        width: 100%;
+        height: 3px;
+        background-color: #D9D9D91F;
+        margin-top: 30px;
+        border-radius: 2px;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(88.51deg, #AB59FF 38.25%, #858FFF 57.67%, #4D9AFF 76.48%);
+            position: absolute;
+            top: 0;
+            border-radius: 2px;
+            left: 0;
+            animation-name: timelapse;
+            animation-fill-mode: forwards;
+            animation-duration: 2s;
+        }
+    }
+}
+
+@keyframes timelapse {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+.nft_staking {
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+    }
+}
+
+.staking_card {
+    background-color: #0D0B20;
+    border: 1px solid;
+    border-image-source: linear-gradient(108.99deg, #AB59FF 6.02%, rgba(133, 143, 255, 0) 17.68%, rgba(111, 147, 255, 0) 81.05%, #4D9AFF 92.01%);
+    border-image-slice: 1;
+    padding: 30px 35px;
+
+    .staking_img {
+        width: 100px;
+        height: 100px;
+        background-color: #23203E;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -60px auto 20px auto;
+    }
+
+    @media screen and (max-width:767px) {
+        margin-top: 50px;
+    }
+}

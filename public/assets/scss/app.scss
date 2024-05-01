@@ -1,0 +1,37 @@
+@import './home/home.scss';
+@import './header/header.scss';
+@import './footer/footer.scss';
+@import './drops/drops.scss';
+@import './collection/collection.scss';
+
+.theme_text {
+    background: linear-gradient(86.87deg, #AB59FF 2.03%, #858FFF 38.96%, #4D9AFF 74.72%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme_btn {
+    background: linear-gradient(86.87deg, #AB59FF 2.03%, #858FFF 38.96%, #4D9AFF 74.72%);
+    color: #100D26;
+    font-weight: 500;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.theme_border {
+    border: 1.5px dashed;
+    border-image-source: linear-gradient(88.51deg, rgba(171, 89, 255, 0.8) 38.25%, rgba(133, 143, 255, 0.8) 57.67%, rgba(77, 154, 255, 0.8) 76.48%);
+    border-image-slice: 1;
+}
+
+.bg-blue-500 {
+    background-color: #4D9AFF;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.w-16 {
+    width: 70px;
+}
